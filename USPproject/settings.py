@@ -18,6 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',  # ✅ Add this line
     'USPapp',
 ]
 
@@ -86,7 +87,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'prajapatiayush1222@gmail.com'  # Replace with your Gmail address
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-
 
 # Force HTTPS in production
 if not DEBUG:
