@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide"/>
+    <link rel="icon" type="image/png" href="{% static 'images/icon.png' %}">
+
+</head>
+
+<body>
+<header class="hero" id="home">
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="Logo"/>
+            </div>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About us</a></li>
+                <li><a href="{% url 'contact' %}">Contact us</a></li>
+                <li><a href="{% url 'faq' %}">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section class="contact-container">
+
+    <h1>Contact Us</h1>
+    <p>Have questions or need support? Get in touch with us and we'll respond as soon as possible.</p>
+
+    <div class="contact-content">
+        <div class="contact-form">
+            <form method="post">
+                {% csrf_token %}
+                <h2>Message Us</h2>
+
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Type your message here..."
+                          required></textarea>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="smsConsent" name="smsConsent" required>
+                    <label for="smsConsent">
+                        I agree to receive communications by text message about my inquiry. You may opt-out by replying
+                        STOP or reply HELP for more information. Message frequency varies. Message and data rates may
+                        apply.
+                        You may review our <a href="{% url 'privacy_policy' %}" target="_blank">Privacy Policy</a>.
+                    </label>
+                </div>
+
+                <button type="submit">Send Message</button>
+                {% if messages %}
+                <div style="margin-top: 15px;">
+                    {% for message in messages %}
+                    <div class="alert alert-success">{{ message }}</div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </form>
+
+        </div>
+
+        <div class="img1">
+            <img src="{% static 'images/Message.png' %}" alt="Contact Illustration"/>
+        </div>
+    </div>
+</section>
+
+<section class="overview-container">
+    <div class="overview-content">
+        <div class="img2">
+            <img src="{% static 'images/contact-us.png' %}" alt="Contact Illustration"/>
+        </div>
+        <div class="contact-details">
+            <h2>📞 Contact Information</h2>
+            <p><strong>Phone:</strong> +91-9023866965</p>
+            <p><strong>Email:</strong> akintime36@gmail.com</p>
+            <p><strong>WhatsApp:</strong> +91-XXXXXXXXXX</p>
+            <p><strong>Location:</strong> Noida, Uttar Pradesh, India</p>
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+
+<footer>
+    <div class="footer-row">
+        <div class="footer-col">
+            <h3>About USP</h3>
+            <a href="{% url 'overview' %}">Company Overview</a>
+            <a href="{% url 'about' %}">Why Choose Us</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'privacy_policy' %}">Privacy Policy</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Services</h3>
+            <a href="{% url 'it_solutions' %}">IT Solutions</a>
+            <a href="{% url 'faq' %}">FAQ</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Connect with Us</h3>
+            <a href="mailto:support@usp.com">✉️ akintime36@gmail.com</a>
+            <a href="#">🔗 LinkedIn</a>
+            <a href="#">📸 Instagram</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 USP. All rights reserved.</p>
+    </div>
+</footer>
+
+</html>

@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="icon" type="image/png" href="{% static 'images/icon.png' %}">
+
+</head>
+
+<body>
+
+<header class="hero" id="home">
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About us</a></li>
+                <li><a href="{% url 'contact' %}">Contact us</a></li>
+                <li><a href="{% url 'faq' %}">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-content">
+        <h1>About <span class="usp-blue">USP</span></h1>
+        <hr>
+    </div>
+</header>
+
+<section class="about" id="about">
+    <div class="about-us">
+        <div class="about-usp">
+            <h2>
+                Who We Are
+            </h2>
+            <br>
+            <p>
+                At USP (Uma shanker Software Provider), we specialize in delivering high-quality software products,
+                custom apps, digital tools, and licensing solutions tailored to meet the evolving needs of
+                individuals and businesses.
+            </p>
+
+            <h2>
+                What We Do
+            </h2>
+            <br>
+            <p>
+                We provide a wide range of software solutions, including SaaS products, custom applications, digital
+                tools, and software licensing—tailored to meet your business needs.
+            </p>
+
+            <h2>
+                Our Mission
+            </h2>
+            <br>
+            <p>
+                To empower users with innovative, easy-to-use, and affordable software that solves real-world
+                problems and drives business success.
+            </p>
+
+
+        </div>
+        <div class="img1">
+            <img src="{% static 'images/weare.png' %}" alt="Who We Are">
+        </div>
+
+        <div class="about-Usp">
+            <h2>
+                Our Promise
+            </h2>
+            <br>
+            <p>
+                We aim to simplify your digital experience through modern, secure, and practical software — backed
+                by reliable service and customer-first thinking
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="why-us-section">
+    <h1>Why Choose USP</h1>
+    <h3>We provide ready-to-use, high-quality software products and tools designed to empower your business
+        from day one.</h3>
+    <div class="why-us-container">
+        <div class="why-us-text">
+
+            <h2>🧩 Plug-and-Play Products</h2>
+            <p>➧ Our tools are pre-built, easy to integrate, and ready to use — no development time, no technical
+                hassle.</p>
+
+            <h2>⚡ Instant Access</h2>
+            <p>➧ No waiting. Get immediate access to powerful software solutions that solve real business problems —
+                right out of the box.</p>
+
+            <h2>💼 Business-Focused Tools</h2>
+            <p>➧ From cloud-based utilities to productivity apps and SaaS platforms, every product is crafted to
+                meet modern business needs.</p>
+
+            <h2>💰 Affordable & Transparent Pricing</h2>
+            <p>➧ No surprise fees. Our pricing is simple, scalable, and accessible to startups and growing
+                businesses alike.</p>
+
+            <h2>🛠️ Maintenance-Free</h2>
+            <p>➧ We handle the updates, hosting, and support — so you can focus on using the tools, not managing
+                them.</p>
+
+            <h2>🤝 Trusted by Professionals</h2>
+            <p>➧ We serve freelancers, startups, and SMEs with reliable digital solutions that just work.</p>
+        </div>
+
+        <div class="why-us-image">
+            <img src="{% static 'images/chooseUs.png' %}" alt="Why USP">
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+
+<footer>
+    <div class="footer-row">
+        <div class="footer-col">
+            <h3>About USP</h3>
+            <a href="{% url 'overview' %}">Company Overview</a>
+            <a href="{% url 'about' %}">Why Choose Us</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'privacy_policy' %}">Privacy Policy</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Services</h3>
+            <a href="{% url 'it_solutions' %}">IT Solutions</a>
+            <a href="{% url 'faq' %}">FAQ</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Connect with Us</h3>
+            <a href="mailto:support@usp.com">✉️ akintime36@gmail.com</a>
+            <a href="#">🔗 LinkedIn</a>
+            <a href="#">📸 Instagram</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 USP. All rights reserved.</p>
+    </div>
+</footer>
+
+</html>

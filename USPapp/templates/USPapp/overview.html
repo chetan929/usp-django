@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Overview</title>
+    <link rel="stylesheet" href="{% static 'css/overview.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="icon" type="image/png" href="{% static 'images/icon.png' %}">
+
+</head>
+
+<body>
+
+<header class="hero" id="home">
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About us</a></li>
+                <li><a href="{% url 'contact' %}">Contact us</a></li>
+                <li><a href="{% url 'faq' %}">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-content">
+        <h1>COMPANY <span class="usp-blue">OVERVIEW</span></h1>
+        <hr>
+    </div>
+</header>
+
+<section class="overview-container">
+    <h1>Company Overview</h1>
+    <div class="overview-content">
+        <div class="overview-text">
+            <p>
+                USP (Uma Shanker Software Provider) is a modern digital solutions provider offering ready-to-use
+                software
+                products, SaaS tools, and app-based services for individuals and businesses. Focused on simplicity,
+                affordability, and speed, USP eliminates the need for complex signups or online payments—customers
+                can
+                simply contact us to get started. From productivity apps to business utilities and licensing
+                solutions, we
+                deliver tools that are practical, scalable, and maintenance-free.
+            </p>
+            <p>
+                At USP, we focus on delivering smart, scalable, and efficient digital tools that meet real-world
+                needs — from
+                business automation and productivity apps to cloud-based platforms and licensed software solutions.
+                Our
+                services are designed to save time, reduce cost, and eliminate the technical burden for our clients.
+                Whether
+                you're starting a new venture or improving existing operations, USP empowers you with solutions that
+                are
+                easy to use, instantly deployable, and fully supported.
+            </p>
+            <p>
+                With a strong commitment to reliability, transparency, and customer satisfaction, USP stands as a
+                trusted
+                partner for businesses looking to grow through technology — without the complexity.
+            </p>
+        </div>
+        <div class="img1">
+            <img src="{% static 'images/overview.png' %}" alt="Overview">
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+<footer>
+    <div class="footer-row">
+        <div class="footer-col">
+            <h3>About USP</h3>
+            <a href="{% url 'overview' %}">Company Overview</a>
+            <a href="{% url 'about' %}">Why Choose Us</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'privacy_policy' %}">Privacy Policy</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Services</h3>
+            <a href="{% url 'it_solutions' %}">IT Solutions</a>
+            <a href="{% url 'faq' %}">FAQ</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Connect with Us</h3>
+            <a href="mailto:support@usp.com">✉️ akintime36@gmail.com</a>
+            <a href="#">🔗 LinkedIn</a>
+            <a href="#">📸 Instagram</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 USP. All rights reserved.</p>
+    </div>
+</footer>
+</html>

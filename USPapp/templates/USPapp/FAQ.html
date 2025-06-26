@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>USP - FAQ</title>
+    <link rel="stylesheet" href="{% static 'css/faq.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide"/>
+    <link rel="icon" type="image/png" href="{% static 'images/icon.png' %}">
+
+</head>
+
+<body>
+
+<header class="hero" id="home">
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About us</a></li>
+                <li><a href="{% url 'contact' %}">Contact us</a></li>
+                <li><a href="{% url 'faq' %}">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="hero-content"></div>
+</header>
+
+<section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-content">
+
+        <div class="faq-items">
+            <div class="faq-item">
+                <h3>1. How do I get started with USP software?</h3>
+                <p>Just contact us by phone, email, or WhatsApp. No login or payment needed online — we’ll guide you
+                    personally.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>2. Are your software products ready to use?</h3>
+                <p>Yes! All tools we offer are plug-and-play — no setup or installation stress. We provide full guidance
+                    during delivery.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>3. Can I get custom features added?</h3>
+                <p>Absolutely. We offer add-on services for customization based on your business needs... (rest of
+                    text)</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>4. Is there any subscription or hidden cost?</h3>
+                <p>No. We offer clear, one-time pricing unless you choose a SaaS-based product — in which case the plan
+                    will be clearly shared before purchase.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>5. How do I get support after purchase?</h3>
+                <p>Our support team is available via email, WhatsApp, or phone. We assist with issues, upgrades, and
+                    general queries.</p>
+            </div>
+        </div>
+
+        <div class="faq-img">
+            <img src="{% static 'images/FAQ.png' %}" alt="FAQ Image"/>
+        </div>
+    </div>
+</section>
+
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+<footer>
+    <div class="footer-row">
+        <div class="footer-col">
+            <h3>About USP</h3>
+            <a href="{% url 'overview' %}">Company Overview</a>
+            <a href="{% url 'about' %}">Why Choose Us</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'privacy_policy' %}">Privacy Policy</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Services</h3>
+            <a href="{% url 'it_solutions' %}">IT Solutions</a>
+            <a href="{% url 'faq' %}">FAQ</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Connect with Us</h3>
+            <a href="mailto:support@usp.com">✉️ akintime36@gmail.com</a>
+            <a href="#">🔗 LinkedIn</a>
+            <a href="#">📸 Instagram</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 USP. All rights reserved.</p>
+    </div>
+</footer>
+
+</html>

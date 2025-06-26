@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Privacy Policy</title>
+    <link rel="stylesheet" href="{% static 'css/policy.css' %}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide"/>
+    <link rel="icon" type="image/png" href="{% static 'images/icon.png' %}">
+
+</head>
+
+<body>
+
+<header class="hero" id="home">
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="Logo"/>
+            </div>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About us</a></li>
+                <li><a href="{% url 'contact' %}">Contact us</a></li>
+                <li><a href="{% url 'faq' %}">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="hero-content">
+        <h1>PRIVACY <span class="usp-blue">POLICY</span></h1>
+    </div>
+</header>
+
+<section class="privacy-container">
+    <h2>SMS Communication & Consent Policy</h2>
+    <p>
+        At USP (Uma Shanker Software Provider), we value your privacy and strive to maintain clear and respectful
+        communication. This policy outlines how we use SMS (text messaging) to communicate with our customers.
+    </p>
+
+    <h2>1. Purpose of SMS Communication</h2>
+    <p>
+        USP may send SMS messages to provide service updates, respond to inquiries, confirm service details, and
+        share important product-related information. We do not use SMS for unsolicited marketing.
+    </p>
+
+    <h2>2. Consent and Opt-In</h2>
+    <p>
+        By contacting us and requesting services, you may choose to opt in to receive SMS communication. Consent is
+        voluntary and will only be used for relevant updates.
+    </p>
+
+    <h2>3. Message Frequency</h2>
+    <p>
+        Message frequency will vary based on your engagement with USP, including product requests, follow-ups, and
+        any service-related updates. We aim to keep messaging minimal and valuable.
+    </p>
+
+    <h2>4. How to Opt-Out</h2>
+    <p>
+        You may opt out of receiving SMS at any time by replying with “STOP”. Once we receive your request, we will
+        confirm your unsubscribe status and no further messages will be sent.
+    </p>
+
+    <h2>5. Re-Subscribing</h2>
+    <p>
+        If you wish to start receiving messages again, reply with “START” or contact our support team. We’ll resume
+        communication with your permission.
+    </p>
+
+    <h2>6. Help and Support</h2>
+    <p>
+        If you need assistance or have questions, reply with “HELP” or contact us at
+        <strong>support@usp.com</strong>. We’re here to help.
+    </p>
+
+    <h2>7. Carrier Charges and Delivery</h2>
+    <p>
+        Standard message and data rates may apply. USP is not responsible for any delays or failed message
+        deliveries caused by mobile carriers.
+    </p>
+
+    <h2>8. Confidentiality and Data Use</h2>
+    <p>
+        Your mobile number and personal data are confidential. USP does not sell, rent, or share your SMS
+        information with any third party. Your opt-in details and consent are strictly protected.
+    </p>
+
+    <h2>9. Contact Information</h2>
+    <p>
+        📧 <strong>Email:</strong> support@usp.com<br/>
+        📞 <strong>Phone:</strong> +91-9023866965
+    </p>
+</section>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+
+<footer>
+    <div class="footer-row">
+        <div class="footer-col">
+            <h3>About USP</h3>
+            <a href="{% url 'overview' %}">Company Overview</a>
+            <a href="{% url 'about' %}">Why Choose Us</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'privacy_policy' %}">Privacy Policy</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Services</h3>
+            <a href="{% url 'it_solutions' %}">IT Solutions</a>
+            <a href="{% url 'faq' %}">FAQ</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Connect with Us</h3>
+            <a href="mailto:support@usp.com">✉️ akintime36@gmail.com</a>
+            <a href="#">🔗 LinkedIn</a>
+            <a href="#">📸 Instagram</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 USP. All rights reserved.</p>
+    </div>
+</footer>
+
+</html>

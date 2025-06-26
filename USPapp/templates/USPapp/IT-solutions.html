@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>IT Solutions</title>
+    <link rel="stylesheet" href="{% static 'css/solution.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="icon" type="image/png" href="{% static 'images/icon.png' %}">
+
+</head>
+
+<body>
+
+<header class="hero" id="home">
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About us</a></li>
+                <li><a href="{% url 'contact' %}">Contact us</a></li>
+                <li><a href="{% url 'faq' %}">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-content">
+        <h1>IT <span class="usp-blue">SOLUTIONS</span></h1>
+        <hr>
+    </div>
+</header>
+
+<section class="solution-container">
+    <h1>IT Solutions</h1>
+    <div class="solution-content">
+        <div class="solution-text">
+            <p>
+                At USP, we offer comprehensive IT solutions that simplify digital transformation for individuals,
+                startups, and small businesses. Our services include ready-made software applications, SaaS
+                platforms, cloud-based tools, and digital product licensing — all designed to boost productivity,
+                streamline operations, and minimize technical overhead.
+            </p>
+            <p>
+                Whether you need a business utility, a customer-facing app, or a secure hosted tool, our solutions
+                are fast, scalable, and require no in-house IT team to manage. USP removes the barriers of complex
+                deployment and lengthy onboarding, making technology instantly accessible and affordable.
+            </p>
+            <p>
+                We also provide end-to-end support, from initial setup to ongoing updates and hosting—ensuring you
+                can focus on running your business while we handle the tech. Our IT solutions are backed by
+                responsive service, transparent pricing, and real-world results.
+            </p>
+        </div>
+        <div class="img1">
+            <img src="{% static 'images/it-solution.png' %}" alt="IT Solution">
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+<footer>
+    <div class="footer-row">
+        <div class="footer-col">
+            <h3>About USP</h3>
+            <a href="{% url 'overview' %}">Company Overview</a>
+            <a href="{% url 'about' %}">Why Choose Us</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'privacy_policy' %}">Privacy Policy</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Services</h3>
+            <a href="{% url 'it_solutions' %}">IT Solutions</a>
+            <a href="{% url 'faq' %}">FAQ</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Connect with Us</h3>
+            <a href="mailto:support@usp.com">✉️ akintime36@gmail.com</a>
+            <a href="#">🔗 LinkedIn</a>
+            <a href="#">📸 Instagram</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 USP. All rights reserved.</p>
+    </div>
+</footer>
+
+</html>

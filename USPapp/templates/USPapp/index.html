@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USP Services</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="icon" type="image/png" href="{% static 'images/icon.png' %}">
+
+
+
+</head>
+
+<body>
+
+<header class="hero" id="home">
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About us</a></li>
+                <li><a href="{% url 'contact' %}">Contact us</a></li>
+                <li><a href="{% url 'faq' %}">FAQ</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-content">
+        <h1>Modern <span class="usp-blue">Software</span></h1>
+        <h2>Solutions for Every Business</h2>
+        <p class="subtext">"From SaaS to Custom Apps, We Deliver it All"</p>
+    </div>
+</header>
+
+<!-- Services Section -->
+<section class="section" id="services">
+    <div class="overlay-text">
+        <h2>Services We Offer</h2>
+        <hr>
+    </div>
+
+    <div class="services">
+        <div class="service-item">
+            <img src="{% static 'images/saas.png' %}" alt="SaaS">
+            <p>SaaS Solutions</p>
+        </div>
+        <div class="service-item">
+            <img src="{% static 'images/app.png' %}" alt="Apps">
+            <p>Apps</p>
+        </div>
+        <div class="service-item">
+            <img src="{% static 'images/software.png' %}" alt="Software">
+            <p>Software</p>
+        </div>
+        <div class="service-item">
+            <img src="{% static 'images/license.png' %}" alt="Licenses">
+            <p>Software Licenses</p>
+        </div>
+        <div class="service-item">
+            <img src="{% static 'images/cloud.png' %}" alt="Cloud">
+            <p>Cloud-Based Tools</p>
+        </div>
+    </div>
+</section>
+
+<!-- Why Us Section -->
+<section class="why-us" id="about">
+    <h1>Why Choose <span class="usp-blue"> USP</span></h1>
+    <div class="why-us-content">
+        <div class="Choose-us">
+            <p>
+                At USP, we don’t just offer software — we provide fully ready-to-use digital products that empower your
+                business from day one. Unlike traditional service models that require weeks of development, our
+                plug-and-play
+                tools are pre-built, carefully optimized, and instantly deployable with zero setup hassle.Whether you're
+                a
+                startup, freelancer, or a growing company, our platform gives you immediate access to powerful SaaS
+                solutions,
+                productivity enhancers, and cloud-based tools tailored to meet modern business demands. With USP,
+                there’s no
+                waiting, no coding, and no confusion — just real value from the moment you get started.
+            </p>
+            <br>
+            <p>
+                We stand out with our clear and affordable pricing...
+            </p>
+            <a class="Read" href="{% url 'about' %}">Read More</a>
+        </div>
+        <div class="img6">
+            <img src="{% static 'images/why.png' %}" alt="Why USP">
+        </div>
+    </div>
+</section>
+
+<section class="section2">
+    <div class="Contact">
+        <div class="img7">
+            <img src="{% static 'images/looking.png' %}" alt="looking for buy">
+        </div>
+        <div class="text-block">
+            <p class="looking">
+                Looking to buy our digital products or need a custom software service tailored for your business?
+            </p>
+            <p class="p2">
+                <strong>Get in touch with<span class="usp-black"> USP</span> today — we're here to help you
+                    succeed!</strong>
+            </p>
+        </div>
+    </div>
+
+    <div class="text-block2">
+        <p class="contact"><strong>Contact us to get started today!</strong><br>
+            📞 <a href="tel:+911234567890">+91 90238669653</a> &nbsp; | &nbsp; 📧 <a
+                    href="mailto:support@usp.com">akintime36@gmail.com</a></p>
+    </div>
+    <div class="img8">
+        <img src="{% static 'images/contact.png' %}" alt="contact us">
+    </div>
+</section>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+
+<footer>
+    <div class="foot-panel1" id="backToTop" style="cursor: pointer;">Back to top</div>
+
+    <div class="footer-row">
+        <div class="footer-col">
+            <h3>About USP</h3>
+            <a href="{% url 'overview' %}">Company Overview</a>
+            <a href="{% url 'about' %}">Why Choose Us</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'privacy_policy' %}">Privacy Policy</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Services</h3>
+            <a href="{% url 'it_solutions' %}">IT Solutions</a>
+            <a href="{% url 'faq' %}">FAQ</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Connect with Us</h3>
+            <a href="mailto:support@usp.com">✉️ akintime36@gmail.com</a>
+            <a href="#">🔗 LinkedIn</a>
+            <a href="#">📸 Instagram</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 USP. All rights reserved.</p>
+    </div>
+
+</footer>
+</html>
