@@ -37,10 +37,11 @@ body {
 }
 
 .logo img {
-    height: 60px;
-    width: auto;
-    transition: height 0.3s ease;
+  height: 90px;              /* Sets fixed height for the logo */
+  width: auto;               /* Maintains aspect ratio */
+  transition: height 0.3s ease;  /* Smooth animation on height change */
 }
+
 
 /* Navigation Menu */
 ul {
