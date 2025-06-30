@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
 
-Sitemap: https://www.usp.services/sitemap.xml
+Sitemap: https://usp.services/sitemap.xml

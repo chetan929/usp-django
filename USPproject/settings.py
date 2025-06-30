@@ -18,13 +18,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sitemaps',  # ✅ Add this line
+    'django.contrib.sitemaps',  # ✅ For sitemap
     'USPapp',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # Added for static file handling
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # ✅ Static file handler
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -71,24 +71,24 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Static files (CSS, JS, Images)
+# Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'USPapp' / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Default auto field
+# Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Email Settings for Gmail SMTP
+# Email settings (Gmail SMTP)
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'prajapatiayush1222@gmail.com'  # Replace with your Gmail address
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER = 'prajapatiayush1222@gmail.com'  # ✅ Change as needed
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  # ✅ Set in environment
 
-# Force HTTPS in production
+# HTTPS/SSL Security settings for production
 if not DEBUG:
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
@@ -96,3 +96,5 @@ if not DEBUG:
     SECURE_HSTS_SECONDS = 31536000
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
     SECURE_HSTS_PRELOAD = True
+    # ✅ VERY IMPORTANT for reverse proxy (e.g., Render, Railway, Fly.io)
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
